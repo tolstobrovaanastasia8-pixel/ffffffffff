@@ -1,0 +1,2882 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+
+    <style>
+      @font-face {
+        font-family: "Inter";
+        src: url("public/Inter-Regular.ttf");
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Inter";
+        src: url("public/Inter-SemiBold.ttf");
+        font-weight: 600;
+        font-display: swap;
+      }
+      body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* Common Style Variables */
+
+  /* Color */
+  --color-brown-100: #a42238;
+  --color-brown-200: #752231;
+  --color-burlywood: #deb673;
+  --color-darkgray: #bab0a2;
+  --color-dimgray-100: #717071;
+  --color-dimgray-200: #635f62;
+  --color-dimgray-300: #665759;
+  --color-dimgray-400: #694554;
+  --color-dimgray-500: #5c4759;
+  --color-gray-100: #3c282b;
+  --color-gray-200: #342425;
+  --color-gray-300: #361220;
+  --color-gray-400: #291325;
+  --color-gray-500: #26171b;
+  --color-gray-600: #210f1e;
+  --color-gray-700: #1a0b17;
+  --color-gray-800: #150412;
+  --color-indianred-100: #de5e73;
+  --color-indianred-200: #c9475e;
+  --color-indianred-300: #b7384e;
+  --color-indianred-400: #9c4757;
+  --color-lightcoral: #f97a86;
+  --color-white: #fff;
+
+  /* Gap */
+  --gap-20: 20px;
+  --gap-3_1: 3.1px;
+  --gap-75_5: 75.5px;
+
+  /* Padding */
+  --padding-0: 0px;
+  --padding-4: 4px;
+  --padding-5: 5px;
+  --padding-6: 6px;
+  --padding-7: 7px;
+  --padding-8: 8px;
+  --padding-9: 9px;
+  --padding-10: 10px;
+  --padding-11: 11px;
+  --padding-15: 15px;
+  --padding-18: 18px;
+  --padding-54: 54px;
+  --padding-55: 55px;
+  --padding-0_5: 0.5px;
+  --padding-4_6: 4.6px;
+  --padding-5_8: 5.8px;
+  --padding-6_9: 6.9px;
+  --padding-7_1: 7.1px;
+
+  /* BorderRadius */
+  --br-0: 0px;
+  --br-10: 10px;
+  --br-20: 20px;
+
+  /* Font */
+  --font-inter: Inter;
+
+  /* FontSize */
+  --fs-9: 9px;
+  --fs-11: 11px;
+  --fs-12: 12px;
+  --fs-13: 13px;
+  --fs-15: 15px;
+  --fs-16: 16px;
+  --fs-19: 19px;
+  --fs-24: 24px;
+
+  /* Borders */
+  --border-1: 1px solid var(--color-gray-200);
+  --border-2: 1px solid var(--color-gray-300);
+  --border-3: 1px solid var(--color-burlywood);
+  --border-4: 1px solid var(--color-dimgray-300);
+
+  /* Gradients */
+  --gradient-1: linear-gradient(180deg, #632428, #160e28);
+
+  /* WidthHeights */
+  --height-12: 12px;
+  --height-15: 15px;
+  --height-16: 16px;
+  --height-349: 349px;
+  --height-14_6: 14.6px;
+  --height-15_8: 15.8px;
+  --height-259_3: 259.3px;
+  --height-26_2: 26.2px;
+  --height-277_6: 277.6px;
+  --height-31_9: 31.9px;
+  --height-361_1: 361.1px;
+  --min-w-146: 146px;
+  --min-w-69_1: 69.1px;
+  --width-1: 1px;
+  --width-10: 10px;
+  --width-13: 13px;
+  --width-60: 60px;
+  --width-194: 194px;
+  --width-15_8: 15.8px;
+  --width-188_8: 188.8px;
+  --width-51_8: 51.8px;
+  --width-84_6: 84.6px;
+  --width-calc100-12_9: calc(100% - 12.9px);
+
+  --left-0: 0px;
+  --left-175_2: 175.2px;
+  --left-181_6: 181.6px;
+  --left-181_7: 181.7px;
+  --left-6_3: 6.3px;
+  --left-6_4: 6.4px;
+  --left-6_5: 6.5px;
+  --top-0: 0px;
+  --top-253_4: 253.4px;
+  --top-253_5: 253.5px;
+  --top-262_6: 262.6px;
+  --top-9_1: 9.1px;
+}
+.screen {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.genre-search-fields-parent {
+  height: 1909px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+}
+.genre-search-fields {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: var(--gradient-1);
+  width: 269px;
+}
+.genre-search-fields2 {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: var(--gradient-1);
+  width: 269px;
+}
+.light-1-icon {
+  position: absolute;
+  top: 19px;
+  left: 0px;
+  width: 1440px;
+  height: 1890px;
+  object-fit: cover;
+  z-index: 1;
+}
+.rectangle-parent {
+  position: absolute;
+  top: 0px;
+  left: 269px;
+  background-color: var(--color-gray-800);
+  width: 902px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 12.3px var(--padding-15) 13.3px;
+  box-sizing: border-box;
+  gap: 9.8px;
+  max-width: 100%;
+  z-index: unset;
+  text-align: left;
+  font-size: var(--fs-16);
+  color: var(--color-lightcoral);
+  font-family: var(--font-inter);
+}
+.frame-child {
+  width: 902px;
+  height: 1909px;
+  position: relative;
+  background-color: var(--color-gray-800);
+  display: none;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.rectangle-group {
+  align-self: stretch;
+  height: 102.2px;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-700);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--padding-0) var(--padding-0) 0.2px;
+  top: 0;
+  z-index: 99;
+  position: sticky;
+  max-width: 100%;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--fs-12);
+  color: var(--color-darkgray);
+  font-family: var(--font-inter);
+}
+.frame-item {
+  align-self: stretch;
+  width: 871.7px;
+  position: relative;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-700);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+}
+.vector-parent {
+  align-self: stretch;
+  flex: 1;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-700);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-0) var(--padding-8);
+  max-width: 100%;
+  z-index: 3;
+}
+.frame-inner {
+  width: 771.4px;
+  position: relative;
+  max-height: 100%;
+  display: none;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.line-div {
+  align-self: stretch;
+  width: var(--width-1);
+  position: relative;
+  border-right: var(--border-1);
+  box-sizing: border-box;
+  display: none;
+  flex-shrink: 0;
+}
+.wrapper {
+  height: var(--height-31_9);
+  width: 137.8px;
+  position: relative;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-300);
+  border: 1px solid var(--color-brown-200);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+  color: var(--color-white);
+}
+.div {
+  position: absolute;
+  top: calc(50% - 7.55px);
+  left: calc(50% - 19px);
+  font-weight: 600;
+  display: inline-block;
+  min-width: 37px;
+}
+.rectangle-container {
+  height: var(--height-31_9);
+  width: 603.2px;
+  position: relative;
+  display: none;
+  max-width: 100%;
+  flex-shrink: 0;
+  color: var(--color-dimgray-100);
+}
+.rectangle-div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-600);
+  border: 1px solid var(--color-darkgray);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.div2 {
+  position: absolute;
+  top: 8.5px;
+  left: 10.7px;
+  display: inline-block;
+  width: 193.1px;
+  white-space: nowrap;
+}
+.component-10 {
+  height: var(--height-15);
+  width: var(--width-60);
+  position: relative;
+  display: none;
+  flex-shrink: 0;
+}
+.div3 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
+  min-width: 60px;
+  height: 100%;
+}
+.component-12 {
+  height: var(--height-15);
+  width: 99.1px;
+  position: relative;
+  display: none;
+  flex-shrink: 0;
+}
+.div4 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
+  min-width: 100px;
+  white-space: nowrap;
+  height: 100%;
+}
+.component-14 {
+  height: var(--height-15);
+  width: 49px;
+  position: relative;
+  display: none;
+  flex-shrink: 0;
+}
+.div5 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
+  min-width: 49px;
+  height: 100%;
+}
+.frame-div {
+  height: 30.4px;
+  width: 87px;
+  position: relative;
+  display: none;
+  flex-shrink: 0;
+  color: var(--color-white);
+}
+.frame-child2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: var(--br-20);
+  background-color: var(--color-gray-500);
+  border: var(--border-1);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.div6 {
+  position: absolute;
+  top: 6.9px;
+  left: 19px;
+  font-weight: 600;
+  display: inline-block;
+  width: 49px;
+  min-width: 49px;
+}
+.frame-2-1 {
+  width: 85.8px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+  display: none;
+  flex-shrink: 0;
+}
+.frame-child3 {
+  align-self: stretch;
+  width: 871.7px;
+  position: relative;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-700);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.frame-2-1-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 7.9px var(--padding-6) var(--padding-0) var(--padding-0);
+  z-index: unset;
+  flex-shrink: 0;
+}
+.frame-2-12 {
+  width: 85.8px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.frame-child4 {
+  align-self: stretch;
+  width: var(--width-1);
+  position: relative;
+  border-right: var(--border-1);
+  box-sizing: border-box;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.frame-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 9.8px var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  max-width: 100%;
+  z-index: unset;
+  flex-shrink: 0;
+}
+.frame-parent {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9.5px;
+  max-width: 100%;
+  z-index: unset;
+}
+.frame-container {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-11) var(--padding-0) var(--padding-9);
+  box-sizing: border-box;
+  max-width: 100%;
+  z-index: unset;
+}
+.frame-group {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 9.6px;
+  max-width: 100%;
+  z-index: unset;
+}
+.rectangle-parent2 {
+  align-self: stretch;
+  flex: 1;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-600);
+  border: 1px solid var(--color-darkgray);
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-7) var(--padding-10);
+  flex-shrink: 0;
+  max-width: 100%;
+  z-index: 1;
+}
+.frame-child5 {
+  height: var(--height-31_9);
+  width: 603.2px;
+  position: relative;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-600);
+  border: 1px solid var(--color-darkgray);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.div32 {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: var(--font-inter);
+  font-size: var(--fs-12);
+  background-color: transparent;
+  position: relative;
+  color: var(--color-dimgray-100);
+  text-align: left;
+  display: inline-block;
+  padding: 0;
+  z-index: 2;
+  flex-shrink: 0;
+}
+.container {
+  cursor: pointer;
+  border: 1px solid var(--color-brown-200);
+  padding: var(--padding-7) 49px;
+  background-color: var(--color-gray-300);
+  height: var(--height-31_9);
+  border-radius: var(--br-10);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.container:hover {
+  background-color: var(--color-dimgray-400);
+  border: 1px solid var(--color-indianred-400);
+  box-sizing: border-box;
+}
+.div28 {
+  position: relative;
+  font-size: var(--fs-12);
+  font-weight: 600;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: left;
+  z-index: unset;
+}
+.line-icon {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  margin-top: -1px;
+  z-index: 1;
+}
+.frame-wrapper2 {
+  width: 472.4px;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) 28px;
+  box-sizing: border-box;
+  max-width: 100%;
+  z-index: unset;
+}
+.frame-nav {
+  margin: 0;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--gap-20);
+  max-width: 100%;
+  z-index: unset;
+  text-align: left;
+  font-size: var(--fs-12);
+  color: var(--color-darkgray);
+  font-family: var(--font-inter);
+}
+.component-14-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-0) var(--padding-0) 7.7px;
+  z-index: unset;
+}
+.component-142 {
+  width: 49px;
+  height: var(--height-15);
+  display: flex;
+  align-items: flex-start;
+}
+.div3 {
+  height: var(--height-15);
+  width: 49px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.rectangle-parent3 {
+  height: 30.4px;
+  border-radius: var(--br-20);
+  background-color: var(--color-gray-500);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-6) var(--padding-18);
+  z-index: 1;
+  color: var(--color-white);
+}
+.frame-child6 {
+  height: 30.4px;
+  width: 87px;
+  position: relative;
+  border-radius: var(--br-20);
+  background-color: var(--color-gray-500);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: none;
+  flex-shrink: 0;
+}
+.div7 {
+  position: relative;
+  font-weight: 600;
+  z-index: 2;
+  flex-shrink: 0;
+}
+.component-10-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-0) 19px 7.6px var(--padding-0);
+  z-index: unset;
+}
+.component-102 {
+  width: var(--width-60);
+  height: var(--height-15);
+  display: flex;
+  align-items: flex-start;
+}
+.div {
+  height: var(--height-15);
+  width: var(--width-60);
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.component-12-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-0) var(--padding-0) 7.6px;
+  z-index: unset;
+}
+.component-122 {
+  width: 99.1px;
+  height: var(--height-15);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+}
+.div2 {
+  height: var(--height-16);
+  width: 100px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.filter-settings-parent {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  gap: 14.8px;
+  max-width: 100%;
+  z-index: unset;
+  flex-shrink: 0;
+}
+.filter-settings {
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-700);
+  border: var(--border-1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18.1px 13px 17.2px var(--padding-18);
+  gap: 6.7px;
+  flex-shrink: 0;
+  z-index: 2;
+  text-align: left;
+  font-size: var(--fs-13);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.filter-settings-child {
+  width: 222.3px;
+  height: 650.8px;
+  position: relative;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-700);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: none;
+  flex-shrink: 0;
+}
+.catalog-filters-title {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) 7.2px;
+  z-index: unset;
+  flex-shrink: 0;
+  font-size: var(--fs-16);
+}
+.h2 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  z-index: 1;
+}
+.h3 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--color-darkgray);
+  display: inline-block;
+  min-width: 46.6px;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.title-input {
+  align-self: stretch;
+  height: var(--height-31_9);
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-400);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-5) var(--padding-7) var(--padding-7);
+  z-index: 1;
+  flex-shrink: 0;
+}
+.title-input-child {
+  height: var(--height-31_9);
+  width: var(--width-188_8);
+  position: relative;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-400);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: none;
+  flex-shrink: 0;
+}
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: var(--font-inter);
+  font-size: var(--fs-13);
+  background-color: transparent;
+  position: relative;
+  color: var(--color-dimgray-200);
+  text-align: left;
+  display: inline-block;
+  padding: 0;
+  z-index: 2;
+  flex-shrink: 0;
+}
+.h32 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--color-darkgray);
+  display: inline-block;
+  min-width: 41.1px;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.component-20 {
+  width: var(--width-188_8);
+  height: var(--height-31_9);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-6_9) var(--padding-5_8) var(--padding-9)
+    var(--padding-7_1);
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  gap: var(--gap-75_5);
+  z-index: 20;
+  flex-shrink: 0;
+}
+.genre-year-filter {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-400);
+  border: var(--border-1);
+  box-sizing: border-box;
+  z-index: 0;
+  flex-shrink: 0;
+}
+.div20 {
+  height: var(--height-16);
+  width: var(--width-84_6);
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.placeholders-wrapper {
+  height: 14.5px;
+  width: var(--width-15_8);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4.5px var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  z-index: 2;
+  flex-shrink: 0;
+  font-size: var(--fs-15);
+}
+.placeholders {
+  width: var(--width-10);
+  height: var(--height-15_8);
+  position: relative;
+  display: inline-block;
+  transform: rotate(90deg);
+}
+.h33 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--color-darkgray);
+  display: inline-block;
+  min-width: 31.6px;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.component-21 {
+  width: var(--width-188_8);
+  height: var(--height-31_9);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-6_9) var(--padding-5_8) var(--padding-9)
+    var(--padding-7_1);
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  gap: var(--gap-75_5);
+  z-index: 19;
+  flex-shrink: 0;
+}
+.frame {
+  height: var(--height-14_6);
+  width: var(--width-15_8);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-4_6) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  z-index: 2;
+  flex-shrink: 0;
+  font-size: var(--fs-15);
+}
+.h34 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--color-darkgray);
+  display: inline-block;
+  min-width: 48.9px;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.component-22 {
+  width: var(--width-188_8);
+  height: var(--height-31_9);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-6_9) var(--padding-5_8) var(--padding-9)
+    var(--padding-7_1);
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  gap: var(--gap-75_5);
+  z-index: 18;
+  flex-shrink: 0;
+}
+.h35 {
+  margin: 0;
+  width: 55.3px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--color-darkgray);
+  display: inline-block;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.component-23 {
+  width: var(--width-188_8);
+  height: var(--height-31_9);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-7) var(--padding-5_8) 8.9px var(--padding-7_1);
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  gap: var(--gap-75_5);
+  z-index: 17;
+  flex-shrink: 0;
+}
+.h36 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--color-darkgray);
+  display: inline-block;
+  min-width: 88.6px;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.component-24 {
+  width: 189px;
+  height: 32px;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-6_9) var(--padding-6) 9.1px var(--padding-7_1);
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  gap: var(--gap-75_5);
+  z-index: 16;
+  flex-shrink: 0;
+}
+.component-24-child {
+  height: var(--height-31_9);
+  width: var(--width-188_8);
+  position: absolute;
+  margin: 0 !important;
+  top: 0px;
+  left: 0px;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-400);
+  border: var(--border-1);
+  box-sizing: border-box;
+  z-index: 0;
+  flex-shrink: 0;
+}
+.div20 {
+  margin: 0;
+  height: var(--height-16);
+  width: var(--width-84_6);
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.h22 {
+  margin: 0;
+  width: var(--width-10);
+  height: var(--height-15_8);
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  transform: rotate(90deg);
+}
+.h37 {
+  margin: 0;
+  width: 67.7px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--color-darkgray);
+  display: inline-block;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.component-25 {
+  width: var(--width-188_8);
+  height: var(--height-31_9);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-6_9) var(--padding-5_8) var(--padding-9)
+    var(--padding-7_1);
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  gap: var(--gap-75_5);
+  z-index: 15;
+  flex-shrink: 0;
+}
+.h38 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--color-darkgray);
+  display: inline-block;
+  min-width: 84.2px;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.component-26-wrapper {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) 14.1px;
+  z-index: unset;
+  flex-shrink: 0;
+}
+.component-26 {
+  height: var(--height-31_9);
+  width: var(--width-188_8);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-6_9) var(--padding-5_8) var(--padding-9)
+    var(--padding-7_1);
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  gap: 47.2px;
+}
+.div13 {
+  height: var(--height-16);
+  width: 112.9px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.filter-settings-inner {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) 4.4px;
+  z-index: unset;
+  flex-shrink: 0;
+}
+.frame-button {
+  cursor: pointer;
+  border: 1px solid var(--color-indianred-300);
+  padding: var(--padding-6) 69px var(--padding-6) 71px;
+  background-color: var(--color-brown-100);
+  height: var(--height-31_9);
+  flex: 1;
+  border-radius: var(--br-10);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  z-index: 1;
+}
+.frame-button:hover {
+  background-color: var(--color-indianred-200);
+  border: 1px solid var(--color-indianred-100);
+  box-sizing: border-box;
+}
+.div15 {
+  flex: 1;
+  position: relative;
+  font-size: var(--fs-13);
+  font-weight: 600;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: center;
+  z-index: unset;
+}
+.component-4 {
+  cursor: pointer;
+  border: 1px solid var(--color-brown-200);
+  padding: var(--padding-8) 21.6px 7.9px 22.7px;
+  background-color: var(--color-gray-300);
+  width: var(--width-188_8);
+  height: var(--height-31_9);
+  border-radius: var(--br-10);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  z-index: 13;
+}
+.div16 {
+  height: var(--height-16);
+  width: 144.5px;
+  position: relative;
+  font-size: var(--fs-13);
+  font-weight: 600;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: center;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.dorama-card-area-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.3px var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  min-width: 412px;
+  max-width: 100%;
+  z-index: unset;
+}
+.dorama-card-area {
+  align-self: stretch;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-700);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-18) var(--padding-11) var(--padding-8);
+  gap: 21.3px;
+  flex-shrink: 0;
+  max-width: 100%;
+  z-index: 2;
+}
+.dorama-card-area-child {
+  width: 634.5px;
+  height: 1601.8px;
+  position: relative;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-700);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.dorama-card-area-inner {
+  width: 549.1px;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-4) 4.5px;
+  box-sizing: border-box;
+  max-width: 100%;
+  z-index: unset;
+  flex-shrink: 0;
+}
+.parent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13.5px;
+  max-width: 100%;
+  z-index: unset;
+}
+.h23 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  min-width: 71.4px;
+  z-index: 1;
+}
+.group {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7.3px;
+  z-index: unset;
+  font-size: var(--fs-24);
+  color: var(--color-white);
+}
+.h39 {
+  margin: 0;
+  width: 162.5px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 1;
+}
+.premium {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--fs-12);
+  z-index: 1;
+}
+.card-elements {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  z-index: unset;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--fs-9);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.div17 {
+  height: var(--height-349);
+  flex: 1;
+  background-color: var(--color-gray-700);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--padding-0) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  min-width: var(--min-w-146);
+  z-index: 1;
+}
+.rectangle-parent4 {
+  flex: 1;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-600);
+  border: var(--border-1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-6);
+  gap: 3.2px;
+  z-index: unset;
+}
+.frame-child7 {
+  align-self: stretch;
+  height: var(--height-361_1);
+  position: relative;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-600);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: none;
+  flex-shrink: 0;
+}
+.nine-puzzles-1-parent {
+  align-self: stretch;
+  height: var(--height-277_6);
+  position: relative;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  background-image: url("./public/Nine-puzzles-11@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.nine-puzzles-1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  z-index: 1;
+}
+.div18 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.child {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.rectangle-parent5 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: unset;
+}
+.frame-child8 {
+  position: absolute;
+  width: var(--width-calc100-12_9);
+  top: 9.1px;
+  right: 6.5px;
+  left: 6.4px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  height: var(--height-259_3);
+  z-index: unset;
+}
+.frame-child9 {
+  position: absolute;
+  top: 9.1px;
+  left: 6.4px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 2;
+}
+.frame-child10 {
+  position: absolute;
+  top: 262.6px;
+  left: 0px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 2;
+}
+.frame-child11 {
+  position: absolute;
+  top: 253.5px;
+  left: 6.5px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 3;
+}
+.frame-child12 {
+  position: absolute;
+  top: 253.5px;
+  left: 175.2px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 2;
+}
+.frame-child13 {
+  position: absolute;
+  top: 262.6px;
+  left: 181.7px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 3;
+}
+.frame-child14 {
+  position: absolute;
+  top: 9.1px;
+  left: 175.2px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 2;
+}
+.frame-child15 {
+  position: absolute;
+  top: 0px;
+  left: 181.7px;
+  border-radius: var(--br-0) var(--br-10) var(--br-0) var(--br-0);
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 3;
+}
+.frame-child16 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: var(--br-10) var(--br-0) var(--br-0) var(--br-0);
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 3;
+}
+.drama-titles {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-8);
+  z-index: unset;
+  flex-shrink: 0;
+  font-size: var(--fs-11);
+}
+.div19 {
+  position: relative;
+  z-index: 1;
+}
+.drama-genres {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-8);
+  z-index: unset;
+  flex-shrink: 0;
+  color: var(--color-darkgray);
+}
+.frame-wrapper3 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-7) var(--padding-0) var(--padding-8);
+  z-index: unset;
+  flex-shrink: 0;
+  color: var(--color-burlywood);
+}
+.frame-parent2 {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-20);
+  z-index: unset;
+}
+.episode-series-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.3px var(--padding-0) var(--padding-0);
+  z-index: unset;
+}
+.episode-series {
+  align-self: stretch;
+  border-radius: var(--br-20);
+  background-color: var(--color-gray-100);
+  border: var(--border-3);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0_5) var(--padding-6);
+  z-index: 1;
+}
+.episode-series-child {
+  height: var(--height-12);
+  width: var(--width-51_8);
+  position: relative;
+  border-radius: var(--br-20);
+  background-color: var(--color-gray-100);
+  border: var(--border-3);
+  box-sizing: border-box;
+  display: none;
+  flex-shrink: 0;
+}
+.div21 {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+.div22 {
+  position: relative;
+  font-size: var(--fs-11);
+  color: var(--color-darkgray);
+  text-align: center;
+  z-index: 1;
+}
+.frame-wrapper4 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-7) var(--padding-0) var(--padding-8);
+  z-index: unset;
+  flex-shrink: 0;
+}
+.wrapper7 {
+  cursor: pointer;
+  border: var(--border-1);
+  padding: var(--padding-5) var(--padding-54) var(--padding-5) var(--padding-55);
+  background-color: var(--color-gray-400);
+  height: var(--height-26_2);
+  flex: 1;
+  border-radius: var(--br-10);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  z-index: 1;
+}
+.wrapper7:hover {
+  background-color: var(--color-dimgray-500);
+  border: var(--border-4);
+  box-sizing: border-box;
+}
+.div23 {
+  flex: 1;
+  position: relative;
+  font-size: var(--fs-12);
+  font-weight: 600;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: center;
+  display: inline-block;
+  min-width: var(--min-w-69_1);
+  z-index: unset;
+}
+.second-adjacent {
+  align-self: stretch;
+  height: var(--height-277_6);
+  position: relative;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  background-image: url("./public/Love-O2O-11@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.love-o2o-1 {
+  position: absolute;
+  top: 0.8px;
+  left: 0px;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  z-index: 1;
+}
+.frame-child18 {
+  position: absolute;
+  width: calc(100% - 12.8px);
+  top: 9.1px;
+  right: 6.5px;
+  left: 6.3px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  height: var(--height-259_3);
+  z-index: unset;
+}
+.frame-child19 {
+  position: absolute;
+  top: 9.1px;
+  left: 6.3px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 2;
+}
+.frame-child21 {
+  position: absolute;
+  top: 253.5px;
+  left: 6.4px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 3;
+}
+.frame-child23 {
+  position: absolute;
+  top: 262.6px;
+  left: 181.6px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 3;
+}
+.frame-child25 {
+  position: absolute;
+  top: 0px;
+  left: 181.6px;
+  border-radius: var(--br-0) var(--br-10) var(--br-0) var(--br-0);
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 3;
+}
+.rectangle-parent8 {
+  border-radius: var(--br-20);
+  background-color: var(--color-gray-100);
+  border: var(--border-3);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0_5) var(--padding-4) var(--padding-0_5)
+    var(--padding-5);
+  z-index: 1;
+}
+.frame-wrapper6 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-7);
+  z-index: unset;
+  flex-shrink: 0;
+}
+.div7 {
+  flex: 1;
+  position: relative;
+  font-size: var(--fs-12);
+  font-weight: 600;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: center;
+  z-index: unset;
+}
+.rectangle-parent9 {
+  flex: 1;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-600);
+  border: var(--border-1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-6);
+  gap: 3px;
+  z-index: unset;
+}
+.manner-of-death-1-parent {
+  align-self: stretch;
+  height: var(--height-277_6);
+  position: relative;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  background-image: url("./public/Manner-of-death-1@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.rectangle-parent11 {
+  border-radius: var(--br-20);
+  background-color: var(--color-gray-100);
+  border: var(--border-3);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0_5) var(--padding-5) var(--padding-0_5)
+    var(--padding-6);
+  z-index: 1;
+}
+.true-beauty-1-parent {
+  align-self: stretch;
+  height: var(--height-277_6);
+  position: relative;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  background-image: url("./public/True-beauty-1@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.frame-child43 {
+  position: absolute;
+  top: 253.4px;
+  left: 6.5px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 3;
+}
+.frame-child44 {
+  position: absolute;
+  top: 253.4px;
+  left: 175.2px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 2;
+}
+.rectangle-parent15 {
+  flex: 1;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-600);
+  border: var(--border-1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-6);
+  gap: 2.8px;
+  z-index: unset;
+}
+.minatos-laundromat-1-parent {
+  align-self: stretch;
+  height: var(--height-277_6);
+  position: relative;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  background-image: url("./public/Minato-s-laundromat-1@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.frame-child54 {
+  position: absolute;
+  top: 253.4px;
+  left: 6.4px;
+  border: var(--border-2);
+  box-sizing: border-box;
+  width: var(--width-13);
+  height: var(--height-15);
+  z-index: 3;
+}
+.frame-parent6 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-20);
+  z-index: unset;
+}
+.rectangle-parent18 {
+  flex: 1;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-600);
+  border: var(--border-1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-6);
+  gap: var(--gap-3_1);
+  z-index: unset;
+}
+.word-of-honor-1-parent {
+  align-self: stretch;
+  height: var(--height-277_6);
+  position: relative;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  background-image: url("./public/Word-of-Honor-1@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.frame-wrapper13 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-6) var(--padding-0) var(--padding-8);
+  z-index: unset;
+  flex-shrink: 0;
+  color: var(--color-burlywood);
+}
+.frame-section {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 20.7px 11px;
+  z-index: unset;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--fs-9);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.div46 {
+  height: var(--height-349);
+  width: var(--width-194);
+  background-color: var(--color-gray-700);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--padding-0) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  z-index: 1;
+}
+.rectangle-parent21 {
+  flex: 1;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-600);
+  border: var(--border-1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-5);
+  gap: var(--gap-3_1);
+  z-index: unset;
+}
+.my-romance-scammer-2-parent {
+  align-self: stretch;
+  height: var(--height-277_6);
+  position: relative;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  background-image: url("./public/My-romance-scammer-2@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.rectangle-parent24 {
+  flex: 1;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-600);
+  border: var(--border-1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-5);
+  gap: 3.3px;
+  z-index: unset;
+}
+.crash-landing-on-you-2-parent {
+  align-self: stretch;
+  height: var(--height-277_6);
+  position: relative;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  background-image: url("./public/Crash-landing-on-you-2@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.ountdown-to-yes-2-parent {
+  align-self: stretch;
+  height: var(--height-277_6);
+  position: relative;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  background-image: url("./public/ountdown-to-yes-2@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.div56 {
+  position: relative;
+  display: inline-block;
+  min-width: 116px;
+  z-index: 1;
+}
+.rectangle-parent29 {
+  border-radius: var(--br-20);
+  background-color: var(--color-gray-100);
+  border: var(--border-3);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0_5) var(--padding-6);
+  z-index: 1;
+}
+.div54 {
+  height: var(--height-349);
+  width: var(--width-194);
+  background-color: var(--color-gray-700);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--padding-0) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  z-index: 1;
+  text-align: center;
+  font-size: var(--fs-12);
+}
+.div55 {
+  width: 69.1px;
+  position: relative;
+  font-weight: 600;
+  display: none;
+  flex-shrink: 0;
+  min-width: var(--min-w-69_1);
+}
+.rectangle-parent30 {
+  flex: 1;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-600);
+  border: var(--border-1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-6);
+  gap: var(--gap-3_1);
+  z-index: unset;
+  text-align: left;
+  font-size: var(--fs-9);
+}
+.the-untamed-1-parent {
+  align-self: stretch;
+  height: var(--height-277_6);
+  position: relative;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  background-image: url("./public/The-Untamed-1@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.wrapper31 {
+  cursor: pointer;
+  border: var(--border-1);
+  padding: var(--padding-5) var(--padding-54) var(--padding-5) var(--padding-55);
+  background-color: var(--color-gray-400);
+  height: var(--height-26_2);
+  flex: 1;
+  border-radius: var(--br-10);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  z-index: 2;
+}
+.wrapper31:hover {
+  background-color: var(--color-dimgray-500);
+  border: var(--border-4);
+  box-sizing: border-box;
+}
+.a-tale-of-1000-stars-2-parent {
+  align-self: stretch;
+  height: var(--height-277_6);
+  position: relative;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  background-image: url("./public/A-tale-of-1000-stars-2@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.rectangle-parent36 {
+  flex: 1;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-600);
+  border: var(--border-1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-6);
+  gap: 2.9px;
+  z-index: unset;
+}
+.cherry-magic-1-parent {
+  align-self: stretch;
+  height: var(--height-277_6);
+  position: relative;
+  border-radius: var(--br-10) var(--br-10) var(--br-0) var(--br-0);
+  background-image: url("./public/Cherry-magic-1@2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.wrapper35 {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-10) var(--padding-0) var(--padding-8);
+  z-index: unset;
+  flex-shrink: 0;
+  font-size: var(--fs-11);
+}
+.rectangle-parent39 {
+  align-self: stretch;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-700);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-15) 20px var(--padding-10) 21px;
+  gap: 10.5px;
+  max-width: 100%;
+  z-index: 2;
+  flex-shrink: 0;
+  font-size: var(--fs-24);
+  color: var(--color-white);
+}
+.frame-child138 {
+  width: 872px;
+  height: 157.6px;
+  position: relative;
+  border-radius: var(--br-10);
+  background-color: var(--color-gray-700);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.parent2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6.6px;
+  z-index: unset;
+  flex-shrink: 0;
+}
+.h310 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  min-width: 118.1px;
+  z-index: 1;
+}
+.e-mail-doramaflicsmailru {
+  position: relative;
+  font-size: 14px;
+  color: var(--color-darkgray);
+  z-index: 1;
+}
+.doramaflicsru {
+  margin: 0;
+  position: relative;
+  font-size: var(--fs-13);
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--color-darkgray);
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 825px) {
+  .genre-search-fields-parent {
+    height: auto;
+    min-height: 1909px;
+  }
+
+  .frame-group {
+    display: none;
+  }
+
+  .filter-settings-parent {
+    flex-wrap: wrap;
+  }
+
+  .filter-settings {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 675px) {
+  .dorama-card-area-wrapper {
+    min-width: 100%;
+  }
+
+  .card-elements {
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(146px, 253px));
+  }
+}
+@media screen and (max-width: 450px) {
+  .h39 {
+    font-size: var(--fs-19);
+  }
+
+  .card-elements {
+    grid-template-columns: minmax(146px, 1fr);
+  }
+
+  .h310 {
+    font-size: var(--fs-19);
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="screen">
+      <main class="genre-search-fields-parent">
+        <div class="genre-search-fields"></div>
+        <div class="genre-search-fields2"></div>
+        <img class="light-1-icon" alt="" src="./public/light-1@2x.png" />
+
+        <main class="rectangle-parent">
+          <div class="frame-child"></div>
+          <header class="rectangle-group">
+            <div class="frame-item"></div>
+            <div class="vector-parent">
+              <img class="frame-inner" alt="" src="./public/Line-1.svg" />
+
+              <div class="line-div"></div>
+              <div class="wrapper">
+                <div class="div">Найти</div>
+              </div>
+              <div class="rectangle-container">
+                <div class="rectangle-div"></div>
+                <div class="div2">Найти дораму, жанр или студию</div>
+              </div>
+              <div class="component-10">
+                <div class="div3">Подписка</div>
+              </div>
+              <div class="component-12">
+                <div class="div4">Личный кабинет</div>
+              </div>
+              <div class="component-14">
+                <div class="div5">Главная</div>
+              </div>
+              <div class="frame-div">
+                <div class="frame-child2"></div>
+                <div class="div6">Каталог</div>
+              </div>
+              <img class="frame-2-1" alt="" src="./public/Frame-2-11@2x.png" />
+
+              <div class="frame-child3"></div>
+              <div class="frame-2-1-wrapper">
+                <img
+                  class="frame-2-12"
+                  loading="lazy"
+                  alt=""
+                  src="./public/Frame-2-11@2x.png"
+                />
+              </div>
+              <div class="frame-child4"></div>
+              <div class="frame-wrapper">
+                <div class="frame-parent">
+                  <div class="frame-container">
+                    <div class="frame-group">
+                      <div class="rectangle-parent2">
+                        <div class="frame-child5"></div>
+                        <input
+                          class="div32"
+                          placeholder="Найти дораму, жанр или студию"
+                          type="text"
+                        />
+                      </div>
+                      <button class="container">
+                        <div class="div28">Найти</div>
+                      </button>
+                    </div>
+                  </div>
+                  <img class="line-icon" alt="" src="./public/Line-1.svg" />
+
+                  <div class="frame-wrapper2">
+                    <nav class="frame-nav">
+                      <div class="component-14-wrapper">
+                        <div class="component-142">
+                          <div class="div3">Главная</div>
+                        </div>
+                      </div>
+                      <div class="rectangle-parent3">
+                        <div class="frame-child6"></div>
+                        <div class="div7">Каталог</div>
+                      </div>
+                      <div class="component-10-wrapper">
+                        <div class="component-102">
+                          <div class="div">Подписка</div>
+                        </div>
+                      </div>
+                      <div class="component-12-wrapper">
+                        <div class="component-122">
+                          <div class="div2">Личный кабинет</div>
+                        </div>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="filter-settings-parent">
+            <section class="filter-settings">
+              <div class="filter-settings-child"></div>
+              <div class="catalog-filters-title">
+                <h2 class="h2">Фильтры каталога</h2>
+              </div>
+              <h3 class="h3">Поиск</h3>
+              <div class="title-input">
+                <div class="title-input-child"></div>
+                <input class="input" placeholder="Название" type="text" />
+              </div>
+              <h3 class="h32">Жанр</h3>
+              <div class="component-20">
+                <div class="genre-year-filter"></div>
+                <div class="div20">Все жанры</div>
+                <div class="placeholders-wrapper">
+                  <div class="placeholders">&gt;</div>
+                </div>
+              </div>
+              <h3 class="h33">Год</h3>
+              <div class="component-21">
+                <div class="genre-year-filter"></div>
+                <div class="div20">Все годы</div>
+                <div class="frame">
+                  <div class="placeholders">&gt;</div>
+                </div>
+              </div>
+              <h3 class="h34">Страна</h3>
+              <div class="component-22">
+                <div class="genre-year-filter"></div>
+                <div class="div20">Все страны</div>
+                <div class="frame">
+                  <div class="placeholders">&gt;</div>
+                </div>
+              </div>
+              <h3 class="h35">Статус</h3>
+              <div class="component-23">
+                <div class="genre-year-filter"></div>
+                <div class="div20">Любой</div>
+                <div class="placeholders-wrapper">
+                  <div class="placeholders">&gt;</div>
+                </div>
+              </div>
+              <h3 class="h36">Тип контента</h3>
+              <div class="component-24">
+                <div class="component-24-child"></div>
+                <h3 class="div20">Все</h3>
+                <div class="frame">
+                  <h2 class="h22">&gt;</h2>
+                </div>
+              </div>
+              <h3 class="h37">Озвучка</h3>
+              <div class="component-25">
+                <div class="genre-year-filter"></div>
+                <div class="div20">Любая</div>
+                <div class="frame">
+                  <div class="placeholders">&gt;</div>
+                </div>
+              </div>
+              <h3 class="h38">Сортировка</h3>
+              <div class="component-26-wrapper">
+                <div class="component-26">
+                  <div class="genre-year-filter"></div>
+                  <div class="div13">По популярности</div>
+                  <div class="frame">
+                    <div class="placeholders">&gt;</div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-settings-inner">
+                <button class="frame-button">
+                  <div class="div15">Найти</div>
+                </button>
+              </div>
+              <button class="component-4">
+                <div class="div16">Случайная дорама</div>
+              </button>
+            </section>
+            <div class="dorama-card-area-wrapper">
+              <div class="dorama-card-area">
+                <div class="dorama-card-area-child"></div>
+                <div class="dorama-card-area-inner">
+                  <div class="parent">
+                    <h2 class="h23">каталог</h2>
+                    <div class="group">
+                      <h3 class="h39">Все дорамы</h3>
+                      <div class="premium">
+                        Каталог доступен всем пользователям. Полный плеер серий
+                        — по подписке Premium.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section class="card-elements">
+                  <div class="div17">
+                    <div class="rectangle-parent4">
+                      <div class="frame-child7"></div>
+                      <div class="nine-puzzles-1-parent">
+                        <img
+                          class="nine-puzzles-1"
+                          alt=""
+                          src="./public/Nine-puzzles-11@2x.png"
+                        />
+
+                        <div class="div18">
+                          <div class="child"></div>
+                          <div class="rectangle-parent5">
+                            <div class="frame-child8"></div>
+                            <div class="frame-child9"></div>
+                            <div class="frame-child10"></div>
+                            <div class="frame-child11"></div>
+                            <div class="frame-child12"></div>
+                            <div class="frame-child13"></div>
+                            <div class="frame-child14"></div>
+                            <div class="frame-child15"></div>
+                            <div class="frame-child16"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="drama-titles">
+                        <div class="div19">Девять пазлов</div>
+                      </div>
+                      <div class="drama-genres">
+                        <div class="div19">2025 • Детектив, триллер</div>
+                      </div>
+                      <div class="frame-wrapper3">
+                        <div class="frame-parent2">
+                          <div class="episode-series-wrapper">
+                            <div class="episode-series">
+                              <div class="episode-series-child"></div>
+                              <div class="div21">11 серий</div>
+                            </div>
+                          </div>
+                          <div class="div22">Корея</div>
+                        </div>
+                      </div>
+                      <div class="frame-wrapper4">
+                        <button class="wrapper7">
+                          <div class="div23">Подробнее</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="div17">
+                    <div class="rectangle-parent4">
+                      <div class="frame-child7"></div>
+                      <div class="second-adjacent">
+                        <img
+                          class="love-o2o-1"
+                          alt=""
+                          src="./public/Love-O2O-11@2x.png"
+                        />
+
+                        <div class="div18">
+                          <div class="child"></div>
+                          <div class="rectangle-parent5">
+                            <div class="frame-child18"></div>
+                            <div class="frame-child19"></div>
+                            <div class="frame-child10"></div>
+                            <div class="frame-child21"></div>
+                            <div class="frame-child12"></div>
+                            <div class="frame-child23"></div>
+                            <div class="frame-child14"></div>
+                            <div class="frame-child25"></div>
+                            <div class="frame-child16"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="drama-titles">
+                        <div class="div19">Легкая улыбка покоряет мир</div>
+                      </div>
+                      <div class="drama-genres">
+                        <div class="div19">2016 • Драма, детектив</div>
+                      </div>
+                      <div class="frame-wrapper3">
+                        <div class="frame-parent2">
+                          <div class="rectangle-parent8">
+                            <div class="episode-series-child"></div>
+                            <div class="div21">30 серий</div>
+                          </div>
+                          <div class="div22">Китай</div>
+                        </div>
+                      </div>
+                      <div class="frame-wrapper6">
+                        <button class="wrapper7">
+                          <div class="div7">Подробнее</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="div17">
+                    <div class="rectangle-parent9">
+                      <div class="frame-child7"></div>
+                      <div class="manner-of-death-1-parent">
+                        <img
+                          class="nine-puzzles-1"
+                          alt=""
+                          src="./public/Manner-of-death-1@2x.png"
+                        />
+
+                        <div class="div18">
+                          <div class="child"></div>
+                          <div class="rectangle-parent5">
+                            <div class="frame-child8"></div>
+                            <div class="frame-child9"></div>
+                            <div class="frame-child10"></div>
+                            <div class="frame-child11"></div>
+                            <div class="frame-child12"></div>
+                            <div class="frame-child13"></div>
+                            <div class="frame-child14"></div>
+                            <div class="frame-child15"></div>
+                            <div class="frame-child16"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="drama-titles">
+                        <div class="div19">Обстоятельства смерти</div>
+                      </div>
+                      <div class="drama-genres">
+                        <div class="div19">2020 • Криминал, мелодрама</div>
+                      </div>
+                      <div class="frame-wrapper3">
+                        <div class="frame-parent2">
+                          <div class="rectangle-parent11">
+                            <div class="episode-series-child"></div>
+                            <div class="div21">14 серий</div>
+                          </div>
+                          <div class="div22">Таиланд</div>
+                        </div>
+                      </div>
+                      <div class="frame-wrapper4">
+                        <button class="wrapper7">
+                          <div class="div23">Подробнее</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="card-elements">
+                  <div class="div17">
+                    <div class="rectangle-parent4">
+                      <div class="frame-child7"></div>
+                      <div class="true-beauty-1-parent">
+                        <img
+                          class="nine-puzzles-1"
+                          alt=""
+                          src="./public/True-beauty-1@2x.png"
+                        />
+
+                        <div class="div18">
+                          <div class="child"></div>
+                          <div class="rectangle-parent5">
+                            <div class="frame-child8"></div>
+                            <div class="frame-child9"></div>
+                            <div class="frame-child10"></div>
+                            <div class="frame-child43"></div>
+                            <div class="frame-child44"></div>
+                            <div class="frame-child13"></div>
+                            <div class="frame-child14"></div>
+                            <div class="frame-child15"></div>
+                            <div class="frame-child16"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="drama-titles">
+                        <div class="div19">Истинная красота</div>
+                      </div>
+                      <div class="drama-genres">
+                        <div class="div19">2020 • Романтика, драма</div>
+                      </div>
+                      <div class="frame-wrapper3">
+                        <div class="frame-parent2">
+                          <div class="rectangle-parent11">
+                            <div class="episode-series-child"></div>
+                            <div class="div21">16 серий</div>
+                          </div>
+                          <div class="div22">Корея</div>
+                        </div>
+                      </div>
+                      <div class="frame-wrapper4">
+                        <button class="wrapper7">
+                          <div class="div23">Подробнее</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="div17">
+                    <div class="rectangle-parent15">
+                      <div class="frame-child7"></div>
+                      <div class="minatos-laundromat-1-parent">
+                        <img
+                          class="nine-puzzles-1"
+                          alt=""
+                          src="./public/Minato-s-laundromat-1@2x.png"
+                        />
+
+                        <div class="div18">
+                          <div class="child"></div>
+                          <div class="rectangle-parent5">
+                            <div class="frame-child18"></div>
+                            <div class="frame-child19"></div>
+                            <div class="frame-child10"></div>
+                            <div class="frame-child54"></div>
+                            <div class="frame-child44"></div>
+                            <div class="frame-child23"></div>
+                            <div class="frame-child14"></div>
+                            <div class="frame-child25"></div>
+                            <div class="frame-child16"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="drama-titles">
+                        <div class="div19">Прачечная Минато</div>
+                      </div>
+                      <div class="drama-genres">
+                        <div class="div19">2022 • Драма, повседневность</div>
+                      </div>
+                      <div class="frame-wrapper3">
+                        <div class="frame-parent6">
+                          <div class="rectangle-parent8">
+                            <div class="episode-series-child"></div>
+                            <div class="div21">24 серии</div>
+                          </div>
+                          <div class="div22">Япония</div>
+                        </div>
+                      </div>
+                      <div class="frame-wrapper6">
+                        <button class="wrapper7">
+                          <div class="div7">Подробнее</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="div17">
+                    <div class="rectangle-parent18">
+                      <div class="frame-child7"></div>
+                      <div class="word-of-honor-1-parent">
+                        <img
+                          class="nine-puzzles-1"
+                          alt=""
+                          src="./public/Word-of-Honor-1@2x.png"
+                        />
+
+                        <div class="div18">
+                          <div class="child"></div>
+                          <div class="rectangle-parent5">
+                            <div class="frame-child8"></div>
+                            <div class="frame-child9"></div>
+                            <div class="frame-child10"></div>
+                            <div class="frame-child43"></div>
+                            <div class="frame-child44"></div>
+                            <div class="frame-child13"></div>
+                            <div class="frame-child14"></div>
+                            <div class="frame-child15"></div>
+                            <div class="frame-child16"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="drama-titles">
+                        <div class="div19">Далекие странники</div>
+                      </div>
+                      <div class="drama-genres">
+                        <div class="div19">2021 • Боевик, приключение</div>
+                      </div>
+                      <div class="frame-wrapper13">
+                        <div class="frame-parent6">
+                          <div class="rectangle-parent8">
+                            <div class="episode-series-child"></div>
+                            <div class="div21">36 серий</div>
+                          </div>
+                          <div class="div22">Китай</div>
+                        </div>
+                      </div>
+                      <div class="frame-wrapper4">
+                        <button class="wrapper7">
+                          <div class="div23">Подробнее</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="frame-section">
+                  <div class="div46">
+                    <div class="rectangle-parent21">
+                      <div class="frame-child7"></div>
+                      <div class="my-romance-scammer-2-parent">
+                        <img
+                          class="nine-puzzles-1"
+                          alt=""
+                          src="./public/My-romance-scammer-2@2x.png"
+                        />
+
+                        <div class="div18">
+                          <div class="child"></div>
+                          <div class="rectangle-parent5">
+                            <div class="frame-child8"></div>
+                            <div class="frame-child9"></div>
+                            <div class="frame-child10"></div>
+                            <div class="frame-child11"></div>
+                            <div class="frame-child12"></div>
+                            <div class="frame-child13"></div>
+                            <div class="frame-child14"></div>
+                            <div class="frame-child15"></div>
+                            <div class="frame-child16"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="drama-titles">
+                        <div class="div19">Моя романтическая афера</div>
+                      </div>
+                      <div class="drama-genres">
+                        <div class="div19">2026 • Комедия, романтика</div>
+                      </div>
+                      <div class="frame-wrapper3">
+                        <div class="frame-parent2">
+                          <div class="rectangle-parent11">
+                            <div class="episode-series-child"></div>
+                            <div class="div21">12 серий</div>
+                          </div>
+                          <div class="div22">Таиланд</div>
+                        </div>
+                      </div>
+                      <div class="frame-wrapper4">
+                        <button class="wrapper7">
+                          <div class="div23">Подробнее</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="div46">
+                    <div class="rectangle-parent24">
+                      <div class="frame-child7"></div>
+                      <div class="crash-landing-on-you-2-parent">
+                        <img
+                          class="nine-puzzles-1"
+                          alt=""
+                          src="./public/Crash-landing-on-you-2@2x.png"
+                        />
+
+                        <div class="div18">
+                          <div class="child"></div>
+                          <div class="rectangle-parent5">
+                            <div class="frame-child18"></div>
+                            <div class="frame-child19"></div>
+                            <div class="frame-child10"></div>
+                            <div class="frame-child21"></div>
+                            <div class="frame-child12"></div>
+                            <div class="frame-child23"></div>
+                            <div class="frame-child14"></div>
+                            <div class="frame-child25"></div>
+                            <div class="frame-child16"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="drama-titles">
+                        <div class="div19">Любовь приходит с неба</div>
+                      </div>
+                      <div class="drama-genres">
+                        <div class="div19">2019 • Романтика, комедия</div>
+                      </div>
+                      <div class="frame-wrapper3">
+                        <div class="frame-parent2">
+                          <div class="rectangle-parent11">
+                            <div class="episode-series-child"></div>
+                            <div class="div21">16 серий</div>
+                          </div>
+                          <div class="div22">Корея</div>
+                        </div>
+                      </div>
+                      <div class="frame-wrapper6">
+                        <button class="wrapper7">
+                          <div class="div23">Подробнее</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="div46">
+                    <div class="rectangle-parent21">
+                      <div class="frame-child7"></div>
+                      <div class="ountdown-to-yes-2-parent">
+                        <img
+                          class="nine-puzzles-1"
+                          alt=""
+                          src="./public/ountdown-to-yes-2@2x.png"
+                        />
+
+                        <div class="div18">
+                          <div class="child"></div>
+                          <div class="rectangle-parent5">
+                            <div class="frame-child8"></div>
+                            <div class="frame-child9"></div>
+                            <div class="frame-child10"></div>
+                            <div class="frame-child11"></div>
+                            <div class="frame-child12"></div>
+                            <div class="frame-child13"></div>
+                            <div class="frame-child14"></div>
+                            <div class="frame-child15"></div>
+                            <div class="frame-child16"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="drama-titles">
+                        <div class="div19">Обратный отсчет до “да”</div>
+                      </div>
+                      <div class="drama-genres">
+                        <div class="div56">2026 • Драма, романтика</div>
+                      </div>
+                      <div class="frame-wrapper3">
+                        <div class="frame-parent2">
+                          <div class="rectangle-parent29">
+                            <div class="episode-series-child"></div>
+                            <div class="div21">11 серий</div>
+                          </div>
+                          <div class="div22">Япония</div>
+                        </div>
+                      </div>
+                      <div class="frame-wrapper4">
+                        <button class="wrapper7">
+                          <div class="div23">Подробнее</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="div54">
+                    <div class="div55">Подробнее</div>
+                    <div class="rectangle-parent30">
+                      <div class="frame-child7"></div>
+                      <div class="the-untamed-1-parent">
+                        <img
+                          class="nine-puzzles-1"
+                          alt=""
+                          src="./public/The-Untamed-1@2x.png"
+                        />
+
+                        <div class="div18">
+                          <div class="child"></div>
+                          <div class="rectangle-parent5">
+                            <div class="frame-child8"></div>
+                            <div class="frame-child9"></div>
+                            <div class="frame-child10"></div>
+                            <div class="frame-child11"></div>
+                            <div class="frame-child12"></div>
+                            <div class="frame-child13"></div>
+                            <div class="frame-child14"></div>
+                            <div class="frame-child15"></div>
+                            <div class="frame-child16"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="drama-titles">
+                        <div class="div19">Неукротимый</div>
+                      </div>
+                      <div class="drama-genres">
+                        <div class="div19">2019 • Боевик, драма</div>
+                      </div>
+                      <div class="frame-wrapper3">
+                        <div class="frame-parent2">
+                          <div class="rectangle-parent8">
+                            <div class="episode-series-child"></div>
+                            <div class="div21">50 серий</div>
+                          </div>
+                          <div class="div22">Китай</div>
+                        </div>
+                      </div>
+                      <div class="frame-wrapper4">
+                        <button class="wrapper31">
+                          <div class="div23">Подробнее</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="div46">
+                    <div class="rectangle-parent18">
+                      <div class="frame-child7"></div>
+                      <div class="a-tale-of-1000-stars-2-parent">
+                        <img
+                          class="nine-puzzles-1"
+                          alt=""
+                          src="./public/A-tale-of-1000-stars-2@2x.png"
+                        />
+
+                        <div class="div18">
+                          <div class="child"></div>
+                          <div class="rectangle-parent5">
+                            <div class="frame-child18"></div>
+                            <div class="frame-child19"></div>
+                            <div class="frame-child10"></div>
+                            <div class="frame-child21"></div>
+                            <div class="frame-child12"></div>
+                            <div class="frame-child23"></div>
+                            <div class="frame-child14"></div>
+                            <div class="frame-child25"></div>
+                            <div class="frame-child16"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="drama-titles">
+                        <div class="div19">Сказка о 1000 звёзд</div>
+                      </div>
+                      <div class="drama-genres">
+                        <div class="div19">2021 • Драма, боевик</div>
+                      </div>
+                      <div class="frame-wrapper3">
+                        <div class="frame-parent2">
+                          <div class="rectangle-parent11">
+                            <div class="episode-series-child"></div>
+                            <div class="div21">10 серий</div>
+                          </div>
+                          <div class="div22">Таиланд</div>
+                        </div>
+                      </div>
+                      <div class="frame-wrapper6">
+                        <button class="wrapper7">
+                          <div class="div23">Подробнее</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="div46">
+                    <div class="rectangle-parent36">
+                      <div class="frame-child7"></div>
+                      <div class="cherry-magic-1-parent">
+                        <img
+                          class="nine-puzzles-1"
+                          alt=""
+                          src="./public/Cherry-magic-1@2x.png"
+                        />
+
+                        <div class="div18">
+                          <div class="child"></div>
+                          <div class="rectangle-parent5">
+                            <div class="frame-child8"></div>
+                            <div class="frame-child9"></div>
+                            <div class="frame-child10"></div>
+                            <div class="frame-child11"></div>
+                            <div class="frame-child12"></div>
+                            <div class="frame-child13"></div>
+                            <div class="frame-child14"></div>
+                            <div class="frame-child15"></div>
+                            <div class="frame-child16"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="wrapper35">
+                        <div class="div19">Оказывается, можно получить...</div>
+                      </div>
+                      <div class="drama-genres">
+                        <div class="div19">2020 • Мелодрама, фэнтази</div>
+                      </div>
+                      <div class="frame-wrapper3">
+                        <div class="frame-parent2">
+                          <div class="rectangle-parent11">
+                            <div class="episode-series-child"></div>
+                            <div class="div21">12 серий</div>
+                          </div>
+                          <div class="div22">Япония</div>
+                        </div>
+                      </div>
+                      <div class="frame-wrapper4">
+                        <button class="wrapper7">
+                          <div class="div23">Подробнее</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class="rectangle-parent39">
+            <div class="frame-child138"></div>
+            <div class="parent2">
+              <h3 class="h310">Контакты</h3>
+              <div class="e-mail-doramaflicsmailru">
+                ИП Толстоброва А.А.<br />Иркутск, ул. Красноярская, д. 37, оф.
+                2<br />Телефон: (6767) 11-03-77<br />E-mail: Doramaflics@mail.ru
+              </div>
+            </div>
+            <h3 class="doramaflicsru">
+              © 2026 Doramaflics.ru. Все права защищены.
+            </h3>
+          </div>
+        </main>
+      </main>
+    </div>
+  </body>
+</html>
